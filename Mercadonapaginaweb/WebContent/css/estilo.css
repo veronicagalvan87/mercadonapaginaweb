@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+#botonlogin + form{
+	margin-top:10px;
+}
+#botonusuarionuevo + form{
+	margin-top: 10px;
+}
+
+#fila1 div img {
+	widht: 100%;
+	height: 200px;
+}
+#botones {
+	margin-top: 10px;
+	
+}
