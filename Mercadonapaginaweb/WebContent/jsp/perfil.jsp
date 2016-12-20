@@ -41,7 +41,7 @@
 
 				<div class="col-sm-6 text-center">
 
-					<a href="Cesta&boton=VERCESTA">
+					<a href="Cesta?boton=VERCESTA">
 						<button name="listapedidos" id="botonpedidos">Ver Cesta</button>
 
 					</a>

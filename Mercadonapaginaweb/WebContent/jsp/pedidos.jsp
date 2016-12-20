@@ -33,20 +33,21 @@
 		<div class="row col-sm-12 text-center">
 
 			<%
-				ResultSet productos = (ResultSet) (request.getAttribute("productosquepaso"));
-				int id = productos.getInt("id");
+				ResultSet datos = (ResultSet) (request.getAttribute("productosquepaso"));
+				while (datos.next()){
+				int id = datos.getInt("id");
 			%>
-			<p><%=productos.getString("nombre")%></p>
-			<p><%=productos.getString("peso")%>
+			<p><%=datos.getString("nombre")%></p>
+			<p><%=datos.getString("peso")%>
 				Gramos/Litros
 			</p>
-			<p><%=productos.getString("precio")%>
+			<p><%=datos.getString("precio")%>
 				Euros
 			</p>
-			<p><%=productos.getString("descripcion")%></p>
-			<img alt="noload" src="<%=productos.getString("imagen")%>">
 
-
+			<%
+				}
+			%>
 
 		</div>
 	</div>

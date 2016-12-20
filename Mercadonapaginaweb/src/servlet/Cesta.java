@@ -85,9 +85,12 @@ public class Cesta extends HttpServlet {
 		}
 		else if (request.getParameter("boton").equals("VERCESTA")) {
 			try {
-				rs = c.query("SELECT p.id,pr.nombre from cliente c " + "inner join pedido p on p.cliente_id=c.id "
-				        + "inner join pedido_producto pp on pp.pedido_id=p.id "
-				        + "INNER join producto pr on pp.producto_id=pr.id where c.id="+cliente_id);
+				rs = c.query("SELECT p.id, pr.nombre, pr.peso, pr.precio from cliente c "
+						+ "inner join pedido p on p.cliente_id=c.id "
+						+ "inner join producto_pedido pp on pp.id_pedido=p.id "
+						+ "inner join producto pr on pp.id_producto=pr.id where c.id="+cliente_id); 
+				        
+				        
 				
 				
 				//Tengo que mandar el usuario a la vista
